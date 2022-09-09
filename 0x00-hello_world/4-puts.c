@@ -2,14 +2,14 @@
 
 /**
  *
- * * main - Prints using puts() command
+ * main - Prints using puts() command
  *
- * * Return: 0 prints something
+ * Return: 0 prints something
  *
  */
 
-int main(void)
-/* no arguments taken by the main */
+	int main(void)
+
 {
 
 		puts("\"Programming is like building a multilingual puzzle");
