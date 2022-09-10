@@ -1,12 +1,9 @@
 #include <stdio.h>
 
 /**
- *
- * * main - Prints the size of each variable
- *
- * * Return: 0 prints sizes
- *
- * */
+ * main - Prints the size of each variable
+ * Return: 0 prints sizes
+ */
 
 int main(void)
 
