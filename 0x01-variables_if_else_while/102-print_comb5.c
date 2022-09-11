@@ -2,88 +2,35 @@
 
 #include <stdlib.h>
 
+#include <time.h>
+
 /**
- *
- *  * main - A program that prints combination of all two digit numbers 0-99.
- *
- *   *
- *
- *    * Return: Always 0 (Success)
- *
- *     */
+ * main - Entry point
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 
 {
 
-		int fTens;
-
-			int fOnes;
-
-				int sTens;
-
-					int sOnes;
-
-						int num, num2;
+		int d;
 
 
+			for (d = 0; d < 100; d++)
 
-							for (num = 0; num <= 99; num++)
+					{
+						putchar((d / 10) + '0');
 
-									{
+						putchar((d % 10) + '0');
+							if (d != 99)
+			{
+																			putchar(',');
+																			putchar(' ');
+																					}
+					}
 
-												fTens = num / 10;
+				putchar('\n');
 
-														fOnes = num % 10;
-
-
-
-																for (num2 = 0; num2 <= 99; num2++)
-
-																			{
-
-																							sTens = num2 / 10;
-
-																										sOnes = num2 % 10;
-
-
-
-																													if (fTens < sTens || (fTens == sTens && fOnes < sOnes))
-
-																																	{
-
-																																						putchar(fTens + '0');
-
-																																										putchar(fOnes + '0');
-
-																																														putchar(' ');
-
-																																																		putchar(sTens + '0');
-
-																																																						putchar(sOnes + '0');
-
-
-
-																																																											if (!(fTens == 9 && fOnes == 8))
-
-																																																																	{
-
-																																																																								putchar(',');
-
-																																																																														putchar(' ');
-
-																																																																																			}
-
-																																																															}
-
-																															}
-
-																	}
-
-									putchar('\n');
-
-
-
-										return (0);
+					return (0);
 
 }
