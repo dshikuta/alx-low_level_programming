@@ -6,9 +6,7 @@
  * main - A program that prints combination of all one digit numbers.
  * Return: Always 0 (Success)
  */
-
 int main(void)
-
 {
 
 	int num;

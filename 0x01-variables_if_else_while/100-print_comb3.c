@@ -3,37 +3,23 @@
 #include <stdlib.h>
 
 /**
- *
- *  * main - A program that prints combination of all two digit numbers.
- *
- *   *
- *
- *    * Return: Always 0 (Success)
- *
- *     */
+ * main - A program that prints combination of all two digit numbers.
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 
 {
 
+	int num = 0;
 
+	int tens;
 
-		int num = 0;
+	int ones;
 
-			int tens;
-
-				int ones;
-
-
-
-					while (num <= 99)
-
-							{
-
-										tens = num % 10;
-
-												ones = num / 10;
-
+	while (num <= 99)
+	{
+	tens = num % 10;						l	ones = num / 10;
 
 
 														if (ones < tens)
