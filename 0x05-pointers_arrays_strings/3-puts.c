@@ -3,6 +3,7 @@
 /**
  * _puts - prints a string, followed by a new line, to stdout
  * @str: string to point
+ * Retur: void
  */
 
 void _puts(char *str)
@@ -24,7 +25,6 @@ void _puts(char *str)
 	{
 
 		_putchar(s[i--]);
-
 	}
 
 	_putchar('\n');
