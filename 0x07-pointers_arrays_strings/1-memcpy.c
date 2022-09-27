@@ -1,26 +1,28 @@
 #include "main.h"
 
 /**
- * _strchr - Entry point
- * @s: input
- * @c: input
- * Return: Always 0 (Success)
+ * * _memcpy - copies memory area.
+ * @dest: char pointer
+ * @src: char pointer
+ * @n: unsigned int
+ * Return: dest
  */
 
-char *_strchr(char *s, char c)
+char *_memcpy(char *dest, char *src, unsigned int n)
 
 {
 
-	int i = 0;
+	unsigned int index;
 
-	for (; s[i] >= '\0'; i++)
+	for (index = 0; n > 0; index++)
 
 	{
 
-		if (s[i] == c)
+		dest[index] = src[index];
 
-		return (&s[i]);
+		n -= 1;
+
 	}
 
-	return (0);
+	return (dest);
 }
