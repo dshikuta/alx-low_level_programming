@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/** 
+/**
  * alloc_grid - nested loop to make grid
  * @width: width input
  * @height: height input
@@ -10,7 +10,6 @@
  */
 int **alloc_grid(int width, int height)
 {
-
 	int **grid;
 
 	int i, j;
@@ -21,44 +20,27 @@ int **alloc_grid(int width, int height)
 
 	grid = malloc(height * sizeof(int *));
 
-						if (grid == NULL)
+	if (grid == NULL)
 
-									return (NULL);
+		return (NULL);
+	for (i = 0; i < height; i++)
+	{
+		grid[i] = malloc(width * sizeof(int));
 
+		if (grid[i] == NULL)
 
+		{
+			while (i >= 0)
+				free(grid[i--]);
+			free(grid);
 
-							for (i = 0; i < height; i++)
+			return (NULL);
+		}
+		for (j = 0; j < width; j++)
 
-									{
+			grid[i][j] = 0;
 
-												grid[i] = malloc(width * sizeof(int));
+	}
 
-														if (grid[i] == NULL)
-
-																	{
-
-																					while (i >= 0)
-
-																										free(grid[i--]);
-
-																								free(grid);
-
-																											return (NULL);
-
-																													}
-
-
-
-
-
-																for (j = 0; j < width; j++)
-
-																				grid[i][j] = 0;
-
-																	}
-
-
-
-								return (grid);
-
+	return (grid);
 }
