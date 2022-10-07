@@ -5,7 +5,7 @@
 /**
  * malloc_checked - allocates memory
  * @b: unsigned int
- * Return: pointer to the new memory
+ * Return:void
  */
 void *malloc_checked(unsigned int b)
 
@@ -16,8 +16,8 @@ void *malloc_checked(unsigned int b)
 	n = malloc(b);
 
 	if (n == NULL)
-
+	{
 		exit(98);
-
+	}
 	return (n);
-
+}
