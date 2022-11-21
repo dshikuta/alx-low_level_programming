@@ -1,25 +1,23 @@
-; File: 101-hello_holberton.asm
-; Desc: 64-bit assembly program that prints
-;       Hello, Holberton followed by a new line.
+	extern printf
 
-external printf
+	section .data
 
-section .text
-   global main
+msg:		db 	"Hello, Holberton", 0
+fmt:		db	"%s", 10, 0
+
+	section	.text
+
+	global	main
 
 main:
-   push rbp
+	push	rbp
 
-   mov rdi,fmt
-   mov rsi,msg
-   mov rax,0
-   call printf
+	mov	rdi,fmt
+	mov	rsi,msg
+	mov	rax,0
+	call	printf
 
-   pop rbp
+	pop	rbp
 
-   mov rax,0
-   ret
-
-section .data
-   msg: db "Hello, Holberton", 0
-   fmt: db "%s", 10, 0
+	mov	rax,0
+	ret
