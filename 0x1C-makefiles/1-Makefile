@@ -1,5 +1,13 @@
 CC = gcc
-SRC = main.c school.c
+SRC = school.c main.c
 
-all: &(SRC)
-	&(CC) &(SRC) -o school
+all:
+	$(CC) $(SRC) -o school
+
+# OR
+# all: $(SRC)
+#	$(CC) $(SRC) -o school
+
+# OR
+# all: $(SRC) message.h
+#       $(CC) $(SRC) -o school
